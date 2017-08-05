@@ -4,14 +4,42 @@
 <div id="googleMap" style="width:100%;height:800px;"></div>
 <script>
 function myMap() {
-var mapProp= {
-    center:new google.maps.LatLng(39.9101736,116.3863727),
-    zoom:5,
-};
-var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+	var mapProp= {
+
+	    center:new google.maps.LatLng(39.9101736,116.3863727),
+	    zoom:5,
+	};
+	var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+	var myLatLng = new google.maps.LatLng(39.9101736, 116.3863727);
+	var flag = new google.maps.MarkerImage('images/flags/AR.png',
+			new google.maps.Size(16,12),
+			new google.maps.Point(0,0),
+			new google.maps.Point(26,26));
+	var marker = new google.maps.Marker({
+	    	position: myLatLng,
+	    	map: map,
+	    	icon: 'images/icons/center_flag.png',
+	    	title: 'China'
+	    });
+	var image = {
+    url: 'images/flags/CN.png',
+    // This marker is 20 pixels wide by 32 pixels high.
+    size: new google.maps.Size(16, 12),
+    // The origin for this image is (0, 0).
+    origin: new google.maps.Point(0, 0),
+    // The anchor for this image is the base of the flagpole at (0, 32).
+    anchor: new google.maps.Point(8, 26)
+  };
+	var marker2 = new google.maps.Marker({
+	    	position: myLatLng,
+	    	map: map,
+	    	icon: image,
+	    	title: 'China'
+	    });
+	marker.setMap(map);
 }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA298iuO3wHYkRo6FXWz05MiXJxeDOJGbY&callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.13&key=AIzaSyA298iuO3wHYkRo6FXWz05MiXJxeDOJGbY&callback=myMap"></script>
 
 </body>
 </html>
