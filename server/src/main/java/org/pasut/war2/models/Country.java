@@ -11,20 +11,25 @@ public class Country {
     private final String code;
     private final String name;
     private final long annualBudget;
+    private final float lat;
+    private final float lon;
 
     Country(){
-        this("", "", 0);
+        this("", "", 0, 0f, 0f);
     }
 
-    public Country(final String id, final String code, final String name, final long annualBudget) {
+    public Country(final String id, final String code, final String name, final long annualBudget, final float lat,
+                   final float lon) {
         this.id = id;
         this.code = code;
         this.name = name;
         this.annualBudget = annualBudget;
+        this.lat = lat;
+        this.lon = lon;
     }
 
-    public Country(final String code, final String name, final long annualBudget) {
-        this(null, code, name, annualBudget);
+    public Country(final String code, final String name, final long annualBudget, final float lat, final float lon) {
+        this(null, code, name, annualBudget, lat, lon);
     }
 
     public String getId() {
@@ -41,6 +46,14 @@ public class Country {
 
     public long getAnnualBudget() {
         return annualBudget;
+    }
+
+    public float getLat() {
+        return lat;
+    }
+
+    public float getLon() {
+        return lon;
     }
 
     @Override
