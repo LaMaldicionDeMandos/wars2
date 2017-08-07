@@ -26,3 +26,8 @@ target
 .DS_Store
 .idea
 *.iml
+
+.angular-cli.json
+.editorconfig
+e2e
+node_modules
