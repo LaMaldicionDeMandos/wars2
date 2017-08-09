@@ -3,8 +3,6 @@
   color: white;
 }
 
-.
-
 .entityList li {
   cursor: pointer;
   position: relative;
@@ -13,6 +11,7 @@
   margin: .5em;
   padding: .3em 0;
   height: 1.6em;
+  width: 20em;
   border-radius: 4px;
 }
 .entityList li.selected:hover {

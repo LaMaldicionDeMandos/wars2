@@ -1,3 +1,7 @@
 <div>
-  <h2>Intro, seleccionar lista de Paises</h2>
+  <ul class="entityList">
+    <li *ngFor="let country of countries" [routerLink]="['/', country.code]">
+      <span class="badge">{{country.code}}</span> {{country.name}}
+    </li>
+  </ul>
 </div>
